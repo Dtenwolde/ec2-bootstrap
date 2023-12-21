@@ -11,7 +11,7 @@ wget https://download.oracle.com/otn_software/linux/instantclient/219000/oracle-
 sudo yum install -y oracle-instantclient-sqlplus-21.9.0.0.0-1.el8.x86_64.rpm
 
 # Install docker container
-docker run -p 1521:1521 -e ORACLE_PWD=helloworld 1521: container-registry.oracle.com/database/free
+docker run -p 1521:1521 -d -e ORACLE_PWD=helloworld container-registry.oracle.com/database/free
 
 # Connect to the db
-sqlplus sys/helloworld@localhost:1521/FREEPDB1 as sysdba
+# sqlplus sys/helloworld@localhost:1521/FREEPDB1 as sysdba
